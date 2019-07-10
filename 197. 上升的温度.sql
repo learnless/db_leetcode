@@ -1,6 +1,7 @@
 -- 查找与之前（昨天的）日期相比温度更高的所有日期的 Id
+-- a 2015-01-04 b 2015-01-03
 select * from weather a, weather b 
-where a.RecordDate = date_sub(b.RecordDate,interval -1 day) 
+where a.RecordDate = date_sub(b.RecordDate,interval -1 day) -- b表的明天
 and a.Temperature > b.Temperature
 
 
